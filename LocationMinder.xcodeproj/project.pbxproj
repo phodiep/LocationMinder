@@ -15,6 +15,10 @@
 		1DF01F421A802065008F514C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF01F401A802065008F514C /* LaunchScreen.xib */; };
 		1DF01F4E1A802065008F514C /* LocationMinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01F4D1A802065008F514C /* LocationMinderTests.m */; };
 		1DF01F581A80208D008F514C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1DF01F571A80208D008F514C /* .gitignore */; };
+		1DF01F611A802BFF008F514C /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01F601A802BFF008F514C /* Stack.m */; };
+		1DF01F641A802C12008F514C /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01F631A802C12008F514C /* Queue.m */; };
+		1DF01F661A803491008F514C /* StackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01F651A803491008F514C /* StackTests.m */; };
+		1DF01F681A803C66008F514C /* QueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01F671A803C66008F514C /* QueueTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,12 @@
 		1DF01F4C1A802065008F514C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DF01F4D1A802065008F514C /* LocationMinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationMinderTests.m; sourceTree = "<group>"; };
 		1DF01F571A80208D008F514C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1DF01F5F1A802BFF008F514C /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		1DF01F601A802BFF008F514C /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		1DF01F621A802C12008F514C /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		1DF01F631A802C12008F514C /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		1DF01F651A803491008F514C /* StackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackTests.m; sourceTree = "<group>"; };
+		1DF01F671A803C66008F514C /* QueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,10 @@
 				1DF01F351A802065008F514C /* AppDelegate.h */,
 				1DF01F361A802065008F514C /* AppDelegate.m */,
 				1DF01F311A802065008F514C /* Supporting Files */,
+				1DF01F5F1A802BFF008F514C /* Stack.h */,
+				1DF01F601A802BFF008F514C /* Stack.m */,
+				1DF01F621A802C12008F514C /* Queue.h */,
+				1DF01F631A802C12008F514C /* Queue.m */,
 			);
 			path = LocationMinder;
 			sourceTree = "<group>";
@@ -108,6 +122,8 @@
 			children = (
 				1DF01F4D1A802065008F514C /* LocationMinderTests.m */,
 				1DF01F4B1A802065008F514C /* Supporting Files */,
+				1DF01F651A803491008F514C /* StackTests.m */,
+				1DF01F671A803C66008F514C /* QueueTest.m */,
 			);
 			path = LocationMinderTests;
 			sourceTree = "<group>";
@@ -247,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF01F641A802C12008F514C /* Queue.m in Sources */,
+				1DF01F611A802BFF008F514C /* Stack.m in Sources */,
 				1DF01F3A1A802065008F514C /* ViewController.m in Sources */,
 				1DF01F371A802065008F514C /* AppDelegate.m in Sources */,
 				1DF01F341A802065008F514C /* main.m in Sources */,
@@ -257,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF01F661A803491008F514C /* StackTests.m in Sources */,
+				1DF01F681A803C66008F514C /* QueueTest.m in Sources */,
 				1DF01F4E1A802065008F514C /* LocationMinderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +462,7 @@
 				1DF01F531A802065008F514C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DF01F541A802065008F514C /* Build configuration list for PBXNativeTarget "LocationMinderTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +471,7 @@
 				1DF01F561A802065008F514C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

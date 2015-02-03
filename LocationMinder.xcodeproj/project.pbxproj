@@ -21,6 +21,7 @@
 		1DF01F681A803C66008F514C /* QueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01F671A803C66008F514C /* QueueTest.m */; };
 		1DF01F6B1A80412B008F514C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01F6A1A80412B008F514C /* MapViewController.m */; };
 		1DF01F6D1A804267008F514C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF01F6C1A804267008F514C /* MapKit.framework */; };
+		1DF01FBB1A81759A008F514C /* AddReminderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01FBA1A81759A008F514C /* AddReminderDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		1DF01F691A80412B008F514C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		1DF01F6A1A80412B008F514C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		1DF01F6C1A804267008F514C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1DF01FB91A81759A008F514C /* AddReminderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderDetailViewController.h; sourceTree = "<group>"; };
+		1DF01FBA1A81759A008F514C /* AddReminderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				1DF01F391A802065008F514C /* ViewController.m */,
 				1DF01F691A80412B008F514C /* MapViewController.h */,
 				1DF01F6A1A80412B008F514C /* MapViewController.m */,
+				1DF01FB91A81759A008F514C /* AddReminderDetailViewController.h */,
+				1DF01FBA1A81759A008F514C /* AddReminderDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 			files = (
 				1DF01F641A802C12008F514C /* Queue.m in Sources */,
 				1DF01F611A802BFF008F514C /* Stack.m in Sources */,
+				1DF01FBB1A81759A008F514C /* AddReminderDetailViewController.m in Sources */,
 				1DF01F3A1A802065008F514C /* ViewController.m in Sources */,
 				1DF01F6B1A80412B008F514C /* MapViewController.m in Sources */,
 				1DF01F371A802065008F514C /* AppDelegate.m in Sources */,

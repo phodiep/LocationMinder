@@ -1,22 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="hQv-OC-fOi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cya-2O-0KU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <view key="view" contentMode="scaleToFill" id="SSq-8Q-suY">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XQa-cU-RLH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="554"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y82-GE-l7W">
+                                <rect key="frame" x="16" y="562" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NUI-cv-UeM"/>
+                                </constraints>
+                                <state key="normal" title="Seattle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seattleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VUm-MD-StC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7n-4H-MhX">
+                                <rect key="frame" x="276" y="562" width="49" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oCv-CE-Jsf"/>
+                                </constraints>
+                                <state key="normal" title="Boston">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bostonButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebe-e5-TlC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99d-KM-FRi">
+                                <rect key="frame" x="518" y="562" width="66" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="63a-G4-nSn"/>
+                                </constraints>
+                                <state key="normal" title="New York">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newYorkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AGy-5N-p7V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cya-2O-0KU" firstAttribute="top" secondItem="99d-KM-FRi" secondAttribute="bottom" constant="8" id="4qE-Hh-XCd"/>
+                            <constraint firstItem="Cya-2O-0KU" firstAttribute="top" secondItem="XQa-cU-RLH" secondAttribute="bottom" id="90z-N3-VMD"/>
+                            <constraint firstItem="99d-KM-FRi" firstAttribute="top" secondItem="XQa-cU-RLH" secondAttribute="bottom" constant="8" id="9RZ-xo-L5N"/>
+                            <constraint firstItem="XQa-cU-RLH" firstAttribute="leading" secondItem="SSq-8Q-suY" secondAttribute="leadingMargin" constant="-16" id="9rK-5a-XET"/>
+                            <constraint firstItem="Y82-GE-l7W" firstAttribute="leading" secondItem="SSq-8Q-suY" secondAttribute="leadingMargin" id="BQc-uN-viB"/>
+                            <constraint firstItem="XQa-cU-RLH" firstAttribute="top" secondItem="hQv-OC-fOi" secondAttribute="bottom" id="Bpt-Cj-Lcj"/>
+                            <constraint firstItem="Cya-2O-0KU" firstAttribute="top" secondItem="Q7n-4H-MhX" secondAttribute="bottom" constant="8" id="EBL-T8-WDs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XQa-cU-RLH" secondAttribute="trailing" constant="-16" id="GuB-cN-9zh"/>
+                            <constraint firstItem="Cya-2O-0KU" firstAttribute="top" secondItem="Y82-GE-l7W" secondAttribute="bottom" constant="8" id="Q9P-UT-lSM"/>
+                            <constraint firstAttribute="centerX" secondItem="Q7n-4H-MhX" secondAttribute="centerX" id="SBV-qR-Kec"/>
+                            <constraint firstItem="99d-KM-FRi" firstAttribute="trailing" secondItem="SSq-8Q-suY" secondAttribute="trailingMargin" id="hlz-x7-j2P"/>
+                            <constraint firstItem="99d-KM-FRi" firstAttribute="baseline" secondItem="Q7n-4H-MhX" secondAttribute="baseline" id="jYQ-ro-D7K"/>
+                            <constraint firstItem="XQa-cU-RLH" firstAttribute="top" secondItem="SSq-8Q-suY" secondAttribute="topMargin" id="zCE-zk-MxK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Bpt-Cj-Lcj"/>
+                                <exclude reference="4qE-Hh-XCd"/>
+                                <exclude reference="90z-N3-VMD"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="XQa-cU-RLH" id="oj2-5m-NE9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

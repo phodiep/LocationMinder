@@ -102,8 +102,25 @@
                     <view key="view" contentMode="scaleToFill" id="04T-WZ-GNm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xf-C7-7iR">
+                                <rect key="frame" x="251" y="72" width="99" height="30"/>
+                                <state key="normal" title="Add Reminder">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addReminderPressed:" destination="uxC-UG-Mc9" eventType="touchUpInside" id="pIm-Rn-37O"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4xf-C7-7iR" firstAttribute="top" secondItem="Suo-Jq-HDX" secondAttribute="bottom" constant="8" id="6FK-Pg-sxO"/>
+                            <constraint firstAttribute="centerX" secondItem="4xf-C7-7iR" secondAttribute="centerX" id="E23-CX-wQF"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qx9-Dr-Cwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,6 +143,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBF-AJ-foV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-46" y="160"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HQc-p8-S8D">
+            <objects>
+                <viewController id="PEd-Go-AWm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AaP-73-b2P"/>
+                        <viewControllerLayoutGuide type="bottom" id="FBm-Xr-rGi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nWe-XA-nM2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bw6-Em-aaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

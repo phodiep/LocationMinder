@@ -37,18 +37,13 @@
     
     //make current vc an observer of specific notification (name) and fire action (@selector) if selected by user
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reminderAdded:) name:@"ReminderAdded" object:nil];
-    
-    if (![CLLocationManager locationServicesEnabled]) {
-        // user has disabled location services
-        // TODO prompt user to enable location to continue
+
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        // request authorization
+        [self.locationManager requestAlwaysAuthorization];
     } else {
-        if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
-            // request authorization
-            [self.locationManager requestAlwaysAuthorization];
-        } else {
-            self.mapView.showsUserLocation = true;
-            [self.locationManager startUpdatingLocation];
-        }
+        self.mapView.showsUserLocation = true;
+        [self.locationManager startUpdatingLocation];
     }
     
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(mapLongPressed:)];
@@ -56,6 +51,8 @@
     
 }
 
+
+#pragma mark - Segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqual:@"SHOW_DETAIL"]) {
         AddReminderDetailViewController *addReminderVC = (AddReminderDetailViewController *)segue.destinationViewController;
@@ -79,6 +76,17 @@
 
 
 #pragma mark - CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    // location services disabled... alert user to enable in settings
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Location Services Disabled" message:@"To continue, go to settings and set Location to ALWAYS for this app." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okOption = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //close alertView
+    }];
+    
+    [alertController addAction:okOption];
+    [self presentViewController:alertController animated:true completion:nil];
+}
+
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
     //create localNotification to alert user, and present it
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];

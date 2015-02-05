@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) MKPointAnnotation *selectedAnnotation;
+@property (strong, nonatomic) NSArray *monitoredRegions;
 
 - (IBAction)seattleButtonPressed:(UIButton *)sender;
 - (IBAction)bostonButtonPressed:(UIButton *)sender;
@@ -51,6 +52,11 @@
     
 }
 
+-(void)dealloc {
+    //cleanup on closing of app
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 #pragma mark - Segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -72,6 +78,8 @@
     MKCircle *circleOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
     [self.mapView addOverlay:circleOverlay];
     
+    self.monitoredRegions = [[self.locationManager monitoredRegions] allObjects];
+    NSLog(@"%i", (int)[self.monitoredRegions count]);
 }
 
 

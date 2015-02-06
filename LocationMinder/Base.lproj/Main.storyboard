@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4lV-bO-Lzb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4lV-bO-Lzb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -104,7 +104,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xf-C7-7iR">
-                                <rect key="frame" x="251" y="338" width="99" height="30"/>
+                                <rect key="frame" x="251" y="280" width="99" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BvU-9R-B86"/>
+                                    <constraint firstAttribute="width" constant="99" id="MWc-ci-5vf"/>
+                                </constraints>
                                 <state key="normal" title="Add Reminder">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -113,52 +117,98 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ef4-Lx-Qtj">
-                                <rect key="frame" x="175" y="163" width="250" height="30"/>
+                                <rect key="frame" x="175" y="175" width="250" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="HcM-0F-TKq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="YDE-iN-Jvs"/>
                                     <constraint firstAttribute="width" constant="250" id="eHw-Nt-9g9"/>
                                     <constraint firstAttribute="height" constant="30" id="iTz-Y2-o7V"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Reminder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKK-kQ-8B0">
-                                <rect key="frame" x="228" y="134" width="144" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Reminder (*required)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKK-kQ-8B0">
+                                <rect key="frame" x="187" y="146" width="227" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="r1f-k4-X2v"/>
+                                    <constraint firstAttribute="height" constant="21" id="uVd-fL-Pjh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius for Reminder (in meters)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="due-2j-akl">
-                                <rect key="frame" x="179" y="223" width="242" height="21"/>
+                                <rect key="frame" x="179" y="213" width="242" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PTQ-II-KcE"/>
+                                    <constraint firstAttribute="width" constant="242" id="xda-5I-eeF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6a-Rr-cWa">
-                                <rect key="frame" x="175" y="252" width="250" height="30"/>
+                                <rect key="frame" x="175" y="242" width="250" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="21A-g4-I5r"/>
                                     <constraint firstAttribute="width" constant="250" id="7mh-hW-WpU"/>
+                                    <constraint firstAttribute="height" constant="30" id="pHP-ZO-yhR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhh-Jf-lTh">
+                                <rect key="frame" x="227" y="72" width="146" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="Tcv-7y-XZI"/>
+                                    <constraint firstAttribute="height" constant="21" id="bKt-A5-cjG"/>
+                                    <constraint firstAttribute="width" constant="146" id="q4U-Jr-XM1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dlq-mk-P1W">
+                                <rect key="frame" x="175" y="101" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="2FD-5X-vY4"/>
+                                    <constraint firstAttribute="height" constant="30" id="MC4-YK-BzU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="ilR-Ju-Ryv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lxW-iX-zcL">
+                                <rect key="frame" x="16" y="318" width="568" height="230"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="ef4-Lx-Qtj" secondAttribute="centerX" id="3VS-ZQ-pDT"/>
-                            <constraint firstItem="ef4-Lx-Qtj" firstAttribute="top" secondItem="gKK-kQ-8B0" secondAttribute="bottom" constant="8" id="4yn-c6-Cnr"/>
-                            <constraint firstItem="gKK-kQ-8B0" firstAttribute="top" secondItem="Suo-Jq-HDX" secondAttribute="bottom" constant="70" id="CmF-2g-UeA"/>
-                            <constraint firstAttribute="centerX" secondItem="e6a-Rr-cWa" secondAttribute="centerX" id="D4m-yR-TTy"/>
-                            <constraint firstAttribute="centerX" secondItem="4xf-C7-7iR" secondAttribute="centerX" id="E23-CX-wQF"/>
-                            <constraint firstAttribute="centerX" secondItem="gKK-kQ-8B0" secondAttribute="centerX" id="G2k-X5-t8c"/>
-                            <constraint firstItem="4xf-C7-7iR" firstAttribute="top" secondItem="e6a-Rr-cWa" secondAttribute="bottom" constant="56" id="LjP-w2-wnJ"/>
-                            <constraint firstAttribute="centerX" secondItem="due-2j-akl" secondAttribute="centerX" id="XzW-Ra-qCW"/>
-                            <constraint firstItem="e6a-Rr-cWa" firstAttribute="top" secondItem="due-2j-akl" secondAttribute="bottom" constant="8" id="b6p-dn-AEO"/>
-                            <constraint firstItem="due-2j-akl" firstAttribute="top" secondItem="ef4-Lx-Qtj" secondAttribute="bottom" constant="30" id="wk6-h8-1be"/>
+                            <constraint firstItem="gKK-kQ-8B0" firstAttribute="top" secondItem="Dlq-mk-P1W" secondAttribute="bottom" constant="15" id="00W-3s-C26"/>
+                            <constraint firstItem="4xf-C7-7iR" firstAttribute="top" secondItem="e6a-Rr-cWa" secondAttribute="bottom" constant="8" id="0ip-k2-ekx"/>
+                            <constraint firstAttribute="centerX" secondItem="Dlq-mk-P1W" secondAttribute="centerX" id="1HH-d9-wra"/>
+                            <constraint firstAttribute="centerX" secondItem="gKK-kQ-8B0" secondAttribute="centerX" id="BHd-9X-1fy"/>
+                            <constraint firstItem="lxW-iX-zcL" firstAttribute="leading" secondItem="04T-WZ-GNm" secondAttribute="leadingMargin" id="BQo-05-DBN"/>
+                            <constraint firstAttribute="centerX" secondItem="ef4-Lx-Qtj" secondAttribute="centerX" id="IS6-aF-asE"/>
+                            <constraint firstItem="ef4-Lx-Qtj" firstAttribute="top" secondItem="gKK-kQ-8B0" secondAttribute="bottom" constant="8" id="KbK-Kb-bnB"/>
+                            <constraint firstAttribute="centerX" secondItem="4xf-C7-7iR" secondAttribute="centerX" id="Kqi-UE-XvP"/>
+                            <constraint firstItem="lxW-iX-zcL" firstAttribute="top" secondItem="4xf-C7-7iR" secondAttribute="bottom" constant="8" id="XK2-VA-yGt"/>
+                            <constraint firstItem="lxW-iX-zcL" firstAttribute="trailing" secondItem="04T-WZ-GNm" secondAttribute="trailingMargin" id="Xl3-Ja-vSR"/>
+                            <constraint firstAttribute="centerX" secondItem="e6a-Rr-cWa" secondAttribute="centerX" id="d0q-Qo-kGU"/>
+                            <constraint firstItem="zhh-Jf-lTh" firstAttribute="top" secondItem="Suo-Jq-HDX" secondAttribute="bottom" constant="8" id="dfH-cQ-bhN"/>
+                            <constraint firstItem="4TD-jG-ZWh" firstAttribute="top" secondItem="lxW-iX-zcL" secondAttribute="bottom" constant="8" id="eLQ-Wu-gAy"/>
+                            <constraint firstItem="due-2j-akl" firstAttribute="top" secondItem="ef4-Lx-Qtj" secondAttribute="bottom" constant="8" id="gpB-6F-uID"/>
+                            <constraint firstAttribute="centerX" secondItem="zhh-Jf-lTh" secondAttribute="centerX" id="jgc-5w-cHw"/>
+                            <constraint firstAttribute="centerX" secondItem="due-2j-akl" secondAttribute="centerX" id="n6j-GL-zDx"/>
+                            <constraint firstItem="e6a-Rr-cWa" firstAttribute="top" secondItem="due-2j-akl" secondAttribute="bottom" constant="8" id="urx-x1-EfO"/>
+                            <constraint firstItem="Dlq-mk-P1W" firstAttribute="top" secondItem="zhh-Jf-lTh" secondAttribute="bottom" constant="8" id="vNJ-gD-6Hs"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="locationText" destination="Dlq-mk-P1W" id="01E-iY-UV1"/>
+                        <outlet property="mapView" destination="lxW-iX-zcL" id="OQB-Fr-ak0"/>
                         <outlet property="nameReminder" destination="ef4-Lx-Qtj" id="oka-IJ-l1G"/>
                         <outlet property="radiusText" destination="e6a-Rr-cWa" id="W9n-01-p0u"/>
                     </connections>

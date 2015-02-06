@@ -36,9 +36,11 @@
     self.locationManager.delegate = self;
     self.mapView.delegate = self;
     
+    self.title = @"Main Map";
+    
     //make current vc an observer of specific notification (name) and fire action (@selector) if selected by user
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reminderAdded:) name:@"ReminderAdded" object:nil];
-
+    
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
         // request authorization
         [self.locationManager requestAlwaysAuthorization];
@@ -79,7 +81,7 @@
     [self.mapView addOverlay:circleOverlay];
     
     self.monitoredRegions = [[self.locationManager monitoredRegions] allObjects];
-    NSLog(@"%i", (int)[self.monitoredRegions count]);
+    NSLog(@"\n number of regions: %i", (int)[self.monitoredRegions count]);
 }
 
 
@@ -98,7 +100,7 @@
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
     //create localNotification to alert user, and present it
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.alertBody = @"region entered"; //text shown in notification alert
+    localNotification.alertBody = region.identifier; //@"region entered"; //text shown in notification alert
     [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 }
 
@@ -126,7 +128,6 @@
     MKCircleRenderer *circle = [[MKCircleRenderer alloc] initWithOverlay:overlay];
     
     circle.fillColor = [UIColor blueColor];
-    circle.strokeColor = [UIColor blueColor];
     circle.alpha = 0.25;
     
     return circle;

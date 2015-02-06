@@ -8,61 +8,75 @@
 
 #import "AddReminderDetailViewController.h"
 
-@interface AddReminderDetailViewController () <UITextFieldDelegate>
+#pragma mark - Interface
+@interface AddReminderDetailViewController ()
 
 - (IBAction)addReminderPressed:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UITextField *nameReminder;
 @property (strong, nonatomic) IBOutlet UITextField *radiusText;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet UITextField *locationText;
 
 @end
 
+#pragma mark - Implementation
 @implementation AddReminderDetailViewController
 
+#pragma mark - ViewController Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.title = @"Add Reminder";
     
-    self.nameReminder.delegate = self;
-    
-    self.nameReminder.text = self.annotation.title;
+    // set defaults
+    self.locationText.text = self.annotation.title;
     self.radiusText.text = @"200";
+
+    // make mapView
+    MKCoordinateRegion mkCoordinates = MKCoordinateRegionMake(self.annotation.coordinate, MKCoordinateSpanMake(.02, .02));
+    [self.mapView setRegion:mkCoordinates];
+    [self.mapView addAnnotation:self.annotation];
     
-//    NSLog(self.annotation.title);
-
 }
-
-- (void) textFieldDidEndEditing:(UITextField *)textField {
-
-//    self.annotation.title = textField.text;
-}
-
 
 #pragma mark - Button Actions
 - (IBAction)addReminderPressed:(UIButton *)sender {
     
-    self.annotation.title = self.nameReminder.text;
-    
-    NSInteger radius = @200;
-    if (self.radiusText.text != nil) {
-        radius = [self.radiusText.text integerValue];
+    if ([self.nameReminder.text isEqual:@""]) {
+        //prompt user for name of reminder
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Name of Reminder Required" message:@"To set a reminder, please provide a name for it." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okOption = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //close alertView
+        }];
+        
+        [alertController addAction:okOption];
+        [self presentViewController:alertController animated:true completion:nil];
+        
+        
+    } else {
+        self.annotation.title = self.locationText.text;
+        
+        NSInteger radius = @200;
+        if (self.radiusText.text != @"") {
+            radius = [self.radiusText.text integerValue];
+        }
+        
+        if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+            //if monitoring is available, create Region w/ specified radius
+            CLCircularRegion *region = [[CLCircularRegion alloc]
+                                        initWithCenter:self.annotation.coordinate
+                                        radius:radius
+                                        identifier:self.nameReminder.text];
+            
+            //start monitoring region, and add to notificationCenter
+            [self.locationManager startMonitoringForRegion:region];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ReminderAdded" object:self userInfo:@{@"notificationRegion":region}];
+            
+            // return to previous view controller
+            [self.navigationController popViewControllerAnimated:true];
+        }
     }
-    
-    if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
-        //if monitoring is available, create Region w/ specified radius
-        CLCircularRegion *region = [[CLCircularRegion alloc]
-                                    initWithCenter:self.annotation.coordinate
-                                    radius:radius
-                                    identifier:@"Reminder"];
-        
-        //start monitoring region, and add to notificationCenter
-        [self.locationManager startMonitoringForRegion:region];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ReminderAdded" object:self userInfo:@{@"notificationRegion":region}];
-        
-        
-    }
-
-    
 }
+
 @end

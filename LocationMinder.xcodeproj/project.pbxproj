@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DA3EB3C1A8414FB00F413C5 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA3EB3B1A8414FB00F413C5 /* InterfaceController.m */; };
+		1DA3EB3E1A8414FB00F413C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA3EB3D1A8414FB00F413C5 /* Images.xcassets */; };
+		1DA3EB421A8414FB00F413C5 /* LocationMinder WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 1DA3EB411A8414FB00F413C5 /* LocationMinder WatchKit App.app */; };
+		1DA3EB4A1A8414FB00F413C5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA3EB481A8414FB00F413C5 /* Interface.storyboard */; };
+		1DA3EB4C1A8414FB00F413C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA3EB4B1A8414FB00F413C5 /* Images.xcassets */; };
+		1DA3EB4F1A8414FB00F413C5 /* LocationMinder WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1DA3EB361A8414FB00F413C5 /* LocationMinder WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1DA3EB5E1A841A1700F413C5 /* ReminderRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA3EB5D1A841A1700F413C5 /* ReminderRowController.m */; };
 		1DF01F341A802065008F514C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01F331A802065008F514C /* main.m */; };
 		1DF01F371A802065008F514C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01F361A802065008F514C /* AppDelegate.m */; };
 		1DF01F3D1A802065008F514C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF01F3B1A802065008F514C /* Main.storyboard */; };
@@ -24,6 +31,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1DA3EB431A8414FB00F413C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF01F261A802065008F514C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DA3EB401A8414FB00F413C5;
+			remoteInfo = "LocationMinder WatchKit App";
+		};
+		1DA3EB4D1A8414FB00F413C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF01F261A802065008F514C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DA3EB351A8414FB00F413C5;
+			remoteInfo = "LocationMinder WatchKit Extension";
+		};
 		1DF01F481A802065008F514C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1DF01F261A802065008F514C /* Project object */;
@@ -33,7 +54,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1DA3EB561A8414FB00F413C5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1DA3EB4F1A8414FB00F413C5 /* LocationMinder WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1DA3EB361A8414FB00F413C5 /* LocationMinder WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LocationMinder WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA3EB391A8414FB00F413C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA3EB3A1A8414FB00F413C5 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		1DA3EB3B1A8414FB00F413C5 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		1DA3EB3D1A8414FB00F413C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1DA3EB411A8414FB00F413C5 /* LocationMinder WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LocationMinder WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA3EB471A8414FB00F413C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA3EB491A8414FB00F413C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1DA3EB4B1A8414FB00F413C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1DA3EB571A84153700F413C5 /* LocationMinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationMinder.entitlements; sourceTree = "<group>"; };
+		1DA3EB581A84157100F413C5 /* LocationMinder WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "LocationMinder WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		1DA3EB5C1A841A1700F413C5 /* ReminderRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderRowController.h; sourceTree = "<group>"; };
+		1DA3EB5D1A841A1700F413C5 /* ReminderRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderRowController.m; sourceTree = "<group>"; };
 		1DF01F2E1A802065008F514C /* LocationMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF01F321A802065008F514C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DF01F331A802065008F514C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +108,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1DA3EB331A8414FB00F413C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DF01F2B1A802065008F514C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,6 +133,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DA3EB371A8414FB00F413C5 /* LocationMinder WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1DA3EB3D1A8414FB00F413C5 /* Images.xcassets */,
+				1DA3EB3A1A8414FB00F413C5 /* InterfaceController.h */,
+				1DA3EB3B1A8414FB00F413C5 /* InterfaceController.m */,
+				1DA3EB581A84157100F413C5 /* LocationMinder WatchKit Extension.entitlements */,
+				1DA3EB5C1A841A1700F413C5 /* ReminderRowController.h */,
+				1DA3EB5D1A841A1700F413C5 /* ReminderRowController.m */,
+				1DA3EB381A8414FB00F413C5 /* Supporting Files */,
+			);
+			path = "LocationMinder WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		1DA3EB381A8414FB00F413C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DA3EB391A8414FB00F413C5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1DA3EB451A8414FB00F413C5 /* LocationMinder WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				1DA3EB481A8414FB00F413C5 /* Interface.storyboard */,
+				1DA3EB4B1A8414FB00F413C5 /* Images.xcassets */,
+				1DA3EB461A8414FB00F413C5 /* Supporting Files */,
+			);
+			path = "LocationMinder WatchKit App";
+			sourceTree = "<group>";
+		};
+		1DA3EB461A8414FB00F413C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DA3EB471A8414FB00F413C5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1DF01F251A802065008F514C = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +180,8 @@
 				1DF01F571A80208D008F514C /* .gitignore */,
 				1DF01F301A802065008F514C /* LocationMinder */,
 				1DF01F4A1A802065008F514C /* LocationMinderTests */,
+				1DA3EB371A8414FB00F413C5 /* LocationMinder WatchKit Extension */,
+				1DA3EB451A8414FB00F413C5 /* LocationMinder WatchKit App */,
 				1DF01F2F1A802065008F514C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +191,8 @@
 			children = (
 				1DF01F2E1A802065008F514C /* LocationMinder.app */,
 				1DF01F471A802065008F514C /* LocationMinderTests.xctest */,
+				1DA3EB361A8414FB00F413C5 /* LocationMinder WatchKit Extension.appex */,
+				1DA3EB411A8414FB00F413C5 /* LocationMinder WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +200,7 @@
 		1DF01F301A802065008F514C /* LocationMinder */ = {
 			isa = PBXGroup;
 			children = (
+				1DA3EB571A84153700F413C5 /* LocationMinder.entitlements */,
 				1DF01F591A8020A4008F514C /* Models */,
 				1DF01F5A1A8020AA008F514C /* Views */,
 				1DF01F5B1A8020B3008F514C /* Controllers */,
@@ -174,6 +274,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1DA3EB351A8414FB00F413C5 /* LocationMinder WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DA3EB551A8414FB00F413C5 /* Build configuration list for PBXNativeTarget "LocationMinder WatchKit Extension" */;
+			buildPhases = (
+				1DA3EB321A8414FB00F413C5 /* Sources */,
+				1DA3EB331A8414FB00F413C5 /* Frameworks */,
+				1DA3EB341A8414FB00F413C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DA3EB441A8414FB00F413C5 /* PBXTargetDependency */,
+			);
+			name = "LocationMinder WatchKit Extension";
+			productName = "LocationMinder WatchKit Extension";
+			productReference = 1DA3EB361A8414FB00F413C5 /* LocationMinder WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		1DA3EB401A8414FB00F413C5 /* LocationMinder WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DA3EB541A8414FB00F413C5 /* Build configuration list for PBXNativeTarget "LocationMinder WatchKit App" */;
+			buildPhases = (
+				1DA3EB3F1A8414FB00F413C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LocationMinder WatchKit App";
+			productName = "LocationMinder WatchKit App";
+			productReference = 1DA3EB411A8414FB00F413C5 /* LocationMinder WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		1DF01F2D1A802065008F514C /* LocationMinder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DF01F511A802065008F514C /* Build configuration list for PBXNativeTarget "LocationMinder" */;
@@ -181,10 +314,12 @@
 				1DF01F2A1A802065008F514C /* Sources */,
 				1DF01F2B1A802065008F514C /* Frameworks */,
 				1DF01F2C1A802065008F514C /* Resources */,
+				1DA3EB561A8414FB00F413C5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1DA3EB4E1A8414FB00F413C5 /* PBXTargetDependency */,
 			);
 			name = LocationMinder;
 			productName = LocationMinder;
@@ -218,9 +353,25 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Pho Diep";
 				TargetAttributes = {
+					1DA3EB351A8414FB00F413C5 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = R5E9GQR46J;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					1DA3EB401A8414FB00F413C5 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					1DF01F2D1A802065008F514C = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = R5E9GQR46J;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -247,11 +398,31 @@
 			targets = (
 				1DF01F2D1A802065008F514C /* LocationMinder */,
 				1DF01F461A802065008F514C /* LocationMinderTests */,
+				1DA3EB351A8414FB00F413C5 /* LocationMinder WatchKit Extension */,
+				1DA3EB401A8414FB00F413C5 /* LocationMinder WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1DA3EB341A8414FB00F413C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA3EB421A8414FB00F413C5 /* LocationMinder WatchKit App.app in Resources */,
+				1DA3EB3E1A8414FB00F413C5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA3EB3F1A8414FB00F413C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA3EB4A1A8414FB00F413C5 /* Interface.storyboard in Resources */,
+				1DA3EB4C1A8414FB00F413C5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DF01F2C1A802065008F514C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +444,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1DA3EB321A8414FB00F413C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA3EB3C1A8414FB00F413C5 /* InterfaceController.m in Sources */,
+				1DA3EB5E1A841A1700F413C5 /* ReminderRowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DF01F2A1A802065008F514C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +479,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1DA3EB441A8414FB00F413C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DA3EB401A8414FB00F413C5 /* LocationMinder WatchKit App */;
+			targetProxy = 1DA3EB431A8414FB00F413C5 /* PBXContainerItemProxy */;
+		};
+		1DA3EB4E1A8414FB00F413C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DA3EB351A8414FB00F413C5 /* LocationMinder WatchKit Extension */;
+			targetProxy = 1DA3EB4D1A8414FB00F413C5 /* PBXContainerItemProxy */;
+		};
 		1DF01F491A802065008F514C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1DF01F2D1A802065008F514C /* LocationMinder */;
@@ -307,6 +497,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1DA3EB481A8414FB00F413C5 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DA3EB491A8414FB00F413C5 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		1DF01F3B1A802065008F514C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -326,6 +524,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1DA3EB501A8414FB00F413C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "LocationMinder WatchKit Extension/LocationMinder WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LocationMinder WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1DA3EB511A8414FB00F413C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "LocationMinder WatchKit Extension/LocationMinder WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "LocationMinder WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1DA3EB521A8414FB00F413C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = LocationMinder_WatchKit_Extension;
+				INFOPLIST_FILE = "LocationMinder WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		1DA3EB531A8414FB00F413C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = LocationMinder_WatchKit_Extension;
+				INFOPLIST_FILE = "LocationMinder WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		1DF01F4F1A802065008F514C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -408,9 +674,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocationMinder/LocationMinder.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LocationMinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -418,9 +688,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocationMinder/LocationMinder.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LocationMinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -461,6 +735,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1DA3EB541A8414FB00F413C5 /* Build configuration list for PBXNativeTarget "LocationMinder WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DA3EB521A8414FB00F413C5 /* Debug */,
+				1DA3EB531A8414FB00F413C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DA3EB551A8414FB00F413C5 /* Build configuration list for PBXNativeTarget "LocationMinder WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DA3EB501A8414FB00F413C5 /* Debug */,
+				1DA3EB511A8414FB00F413C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DF01F291A802065008F514C /* Build configuration list for PBXProject "LocationMinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

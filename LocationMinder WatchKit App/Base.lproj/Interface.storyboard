@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <table alignment="left" id="dht-0z-u7I">
+                            <items>
+                                <tableRow identifier="ReminderRowController" id="ZXR-v4-08T" customClass="ReminderRowController">
+                                    <group key="rootItem" width="1" height="129" alignment="left" layout="vertical" id="4TU-gw-nTa">
+                                        <items>
+                                            <label width="1" alignment="left" text="Label" textAlignment="center" id="xCX-VW-qid"/>
+                                            <map height="100" alignment="left" id="olA-AD-6kx"/>
+                                        </items>
+                                        <color key="backgroundColor" red="0.33445956760000001" green="0.72742624980000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="map" destination="olA-AD-6kx" id="LKf-vZ-uij"/>
+                                        <outlet property="reminderLabel" destination="xCX-VW-qid" id="m2f-Bi-mUO"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="dht-0z-u7I" id="WFk-WY-OMF"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>

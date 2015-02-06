@@ -16,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *radiusText;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UITextField *locationText;
+@property (strong, nonatomic) IBOutlet UILabel *LongLabel;
+@property (strong, nonatomic) IBOutlet UILabel *Latlabel;
 
 @end
 
@@ -28,6 +30,9 @@
     // Do any additional setup after loading the view.
     
     self.title = @"Add Reminder";
+
+    self.LongLabel.text = [NSString stringWithFormat:@"Longitude: %0.03f", self.annotation.coordinate.longitude ];
+    self.Latlabel.text = [NSString stringWithFormat:@"Latitude: %0.03f", self.annotation.coordinate.latitude ];
     
     // set defaults
     self.locationText.text = self.annotation.title;

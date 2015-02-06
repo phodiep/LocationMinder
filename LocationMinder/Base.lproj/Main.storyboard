@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4lV-bO-Lzb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4lV-bO-Lzb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -179,8 +179,20 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lxW-iX-zcL">
-                                <rect key="frame" x="16" y="318" width="568" height="230"/>
+                                <rect key="frame" x="16" y="344" width="568" height="204"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LatLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvA-Ap-cfw">
+                                <rect key="frame" x="16" y="318" width="50" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LongLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqa-vH-6Ys">
+                                <rect key="frame" x="521" y="318" width="63" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -189,24 +201,30 @@
                             <constraint firstAttribute="centerX" secondItem="Dlq-mk-P1W" secondAttribute="centerX" id="1HH-d9-wra"/>
                             <constraint firstAttribute="centerX" secondItem="gKK-kQ-8B0" secondAttribute="centerX" id="BHd-9X-1fy"/>
                             <constraint firstItem="lxW-iX-zcL" firstAttribute="leading" secondItem="04T-WZ-GNm" secondAttribute="leadingMargin" id="BQo-05-DBN"/>
+                            <constraint firstItem="lxW-iX-zcL" firstAttribute="top" secondItem="EvA-Ap-cfw" secondAttribute="bottom" constant="8" id="CA1-Ca-xgK"/>
                             <constraint firstAttribute="centerX" secondItem="ef4-Lx-Qtj" secondAttribute="centerX" id="IS6-aF-asE"/>
                             <constraint firstItem="ef4-Lx-Qtj" firstAttribute="top" secondItem="gKK-kQ-8B0" secondAttribute="bottom" constant="8" id="KbK-Kb-bnB"/>
                             <constraint firstAttribute="centerX" secondItem="4xf-C7-7iR" secondAttribute="centerX" id="Kqi-UE-XvP"/>
-                            <constraint firstItem="lxW-iX-zcL" firstAttribute="top" secondItem="4xf-C7-7iR" secondAttribute="bottom" constant="8" id="XK2-VA-yGt"/>
+                            <constraint firstItem="EvA-Ap-cfw" firstAttribute="leading" secondItem="04T-WZ-GNm" secondAttribute="leadingMargin" id="Odh-eZ-kBa"/>
                             <constraint firstItem="lxW-iX-zcL" firstAttribute="trailing" secondItem="04T-WZ-GNm" secondAttribute="trailingMargin" id="Xl3-Ja-vSR"/>
                             <constraint firstAttribute="centerX" secondItem="e6a-Rr-cWa" secondAttribute="centerX" id="d0q-Qo-kGU"/>
                             <constraint firstItem="zhh-Jf-lTh" firstAttribute="top" secondItem="Suo-Jq-HDX" secondAttribute="bottom" constant="8" id="dfH-cQ-bhN"/>
                             <constraint firstItem="4TD-jG-ZWh" firstAttribute="top" secondItem="lxW-iX-zcL" secondAttribute="bottom" constant="8" id="eLQ-Wu-gAy"/>
                             <constraint firstItem="due-2j-akl" firstAttribute="top" secondItem="ef4-Lx-Qtj" secondAttribute="bottom" constant="8" id="gpB-6F-uID"/>
                             <constraint firstAttribute="centerX" secondItem="zhh-Jf-lTh" secondAttribute="centerX" id="jgc-5w-cHw"/>
+                            <constraint firstItem="lxW-iX-zcL" firstAttribute="top" secondItem="Rqa-vH-6Ys" secondAttribute="bottom" constant="8" id="lqg-hR-9vi"/>
+                            <constraint firstItem="Rqa-vH-6Ys" firstAttribute="trailing" secondItem="04T-WZ-GNm" secondAttribute="trailingMargin" id="mhL-ti-EpV"/>
                             <constraint firstAttribute="centerX" secondItem="due-2j-akl" secondAttribute="centerX" id="n6j-GL-zDx"/>
                             <constraint firstItem="e6a-Rr-cWa" firstAttribute="top" secondItem="due-2j-akl" secondAttribute="bottom" constant="8" id="urx-x1-EfO"/>
                             <constraint firstItem="Dlq-mk-P1W" firstAttribute="top" secondItem="zhh-Jf-lTh" secondAttribute="bottom" constant="8" id="vNJ-gD-6Hs"/>
+                            <constraint firstItem="lxW-iX-zcL" firstAttribute="top" secondItem="4xf-C7-7iR" secondAttribute="bottom" constant="34" id="yR3-B5-bBO"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="Latlabel" destination="EvA-Ap-cfw" id="sp8-Oh-yvi"/>
+                        <outlet property="LongLabel" destination="Rqa-vH-6Ys" id="bLc-4P-ufW"/>
                         <outlet property="locationText" destination="Dlq-mk-P1W" id="01E-iY-UV1"/>
                         <outlet property="mapView" destination="lxW-iX-zcL" id="OQB-Fr-ak0"/>
                         <outlet property="nameReminder" destination="ef4-Lx-Qtj" id="oka-IJ-l1G"/>

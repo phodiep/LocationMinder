@@ -88,12 +88,16 @@
 #pragma mark - CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     // location services disabled... alert user to enable in settings
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Location Services Disabled" message:@"To continue, go to settings and set Location to ALWAYS for this app." preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okOption = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        //close alertView
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Location Services Disabled" message:@"To continue, go to settings and set Location to 'Always' for this app." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *settingsOption = [UIAlertAction actionWithTitle:@"Go To Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.navigationController popViewControllerAnimated:true];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     }];
-    
-    [alertController addAction:okOption];
+    UIAlertAction *cancelOption = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        [self.navigationController popViewControllerAnimated:true];
+    }];
+    [alertController addAction:settingsOption];
+    [alertController addAction:cancelOption];
     [self presentViewController:alertController animated:true completion:nil];
 }
 

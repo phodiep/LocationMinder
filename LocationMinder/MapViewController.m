@@ -92,6 +92,7 @@
     UIAlertAction *settingsOption = [UIAlertAction actionWithTitle:@"Go To Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self.navigationController popViewControllerAnimated:true];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+        
     }];
     UIAlertAction *cancelOption = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         [self.navigationController popViewControllerAnimated:true];
